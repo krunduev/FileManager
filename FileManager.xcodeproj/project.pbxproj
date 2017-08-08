@@ -13,7 +13,6 @@
 		4FD691CE1F39CF0E009737D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD691CD1F39CF0E009737D9 /* Assets.xcassets */; };
 		4FD691D11F39CF0E009737D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD691CF1F39CF0E009737D9 /* LaunchScreen.storyboard */; };
 		4FD691DD1F39F403009737D9 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD691DC1F39F3AA009737D9 /* test.txt */; };
-		4FD691E01F39FF04009737D9 /* test2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FD691DE1F39F977009737D9 /* test2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		4FD691D01F39CF0E009737D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FD691D21F39CF0E009737D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FD691DC1F39F3AA009737D9 /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
-		4FD691DE1F39F977009737D9 /* test2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				4FD691DC1F39F3AA009737D9 /* test.txt */,
-				4FD691D81F39EFFC009737D9 /* Resource */,
 				4FD691C61F39CF0E009737D9 /* AppDelegate.swift */,
 				4FD691C81F39CF0E009737D9 /* ViewController.swift */,
 				4FD691CA1F39CF0E009737D9 /* Main.storyboard */,
@@ -68,14 +65,6 @@
 				4FD691D21F39CF0E009737D9 /* Info.plist */,
 			);
 			path = FileManager;
-			sourceTree = "<group>";
-		};
-		4FD691D81F39EFFC009737D9 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				4FD691DE1F39F977009737D9 /* test2.txt */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +125,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD691E01F39FF04009737D9 /* test2.txt in Resources */,
 				4FD691DD1F39F403009737D9 /* test.txt in Resources */,
 				4FD691D11F39CF0E009737D9 /* LaunchScreen.storyboard in Resources */,
 				4FD691CE1F39CF0E009737D9 /* Assets.xcassets in Resources */,

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ou-qn-SRt">
+                                <rect key="frame" x="16" y="40" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.13237847222222221" green="0.133056640625" blue="0.1340060763888889" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="Создать файл">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createFileBtnPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDH-Z5-cB7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSf-9e-QLd">
+                                <rect key="frame" x="16" y="163" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.13237847222222221" green="0.133056640625" blue="0.1340060763888889" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="Просмотреть директорию">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewDirectoryBtnPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7PG-UJ-0Lp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM3-wI-tfT">
+                                <rect key="frame" x="16" y="81" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.13237847222222221" green="0.133056640625" blue="0.1340060763888889" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="Прочитать файл">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="readFileBtnPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22Y-gG-lvZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiV-j7-y5f">
+                                <rect key="frame" x="16" y="122" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.13237847222222221" green="0.133056640625" blue="0.1340060763888889" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="Удалить файл">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteFileBtnPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6e5-ZK-nH0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx2-5s-hxa">
+                                <rect key="frame" x="16" y="204" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.13237847222222221" green="0.133056640625" blue="0.1340060763888889" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="Просмотреть ресурс">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewRecource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="55l-l1-pF5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kiV-j7-y5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1oA-LA-fKD"/>
+                            <constraint firstItem="kiV-j7-y5f" firstAttribute="top" secondItem="TM3-wI-tfT" secondAttribute="bottom" constant="8" id="8hq-Z6-W1z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ou-qn-SRt" secondAttribute="trailing" constant="16" id="BF7-PS-acb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kiV-j7-y5f" secondAttribute="trailing" constant="16" id="CYh-ZH-UD0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bx2-5s-hxa" secondAttribute="trailing" constant="16" id="FOj-QB-r0R"/>
+                            <constraint firstItem="TM3-wI-tfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PZJ-iW-EVb"/>
+                            <constraint firstItem="TM3-wI-tfT" firstAttribute="top" secondItem="6ou-qn-SRt" secondAttribute="bottom" constant="8" id="Tmg-RY-4Am"/>
+                            <constraint firstItem="jSf-9e-QLd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tn7-Ng-q2X"/>
+                            <constraint firstItem="bx2-5s-hxa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Z8G-17-Kpy"/>
+                            <constraint firstItem="bx2-5s-hxa" firstAttribute="top" secondItem="jSf-9e-QLd" secondAttribute="bottom" constant="8" id="b0p-rO-wSO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TM3-wI-tfT" secondAttribute="trailing" constant="16" id="cmp-ga-eel"/>
+                            <constraint firstItem="6ou-qn-SRt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fXC-8l-tF9"/>
+                            <constraint firstItem="jSf-9e-QLd" firstAttribute="top" secondItem="kiV-j7-y5f" secondAttribute="bottom" constant="8" id="lvE-Vi-mxF"/>
+                            <constraint firstItem="6ou-qn-SRt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qFV-hw-ceJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jSf-9e-QLd" secondAttribute="trailing" constant="16" id="xdO-B7-L0K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
